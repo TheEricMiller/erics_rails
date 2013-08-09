@@ -10,6 +10,7 @@ gem 'thin'
 # gem 'unicorn'                           # Use unicorn as the app server
 # gem 'bcrypt-ruby', '~> 3.0.0'           # Use ActiveModel has_secure_password
 gem 'jbuilder', '~> 1.2'                  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'figaro'
 
 
 # ===~===~===~===~===~===~===~===~===~===
