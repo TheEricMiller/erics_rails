@@ -6,6 +6,7 @@ gem 'rails', '4.0.0'
 
 # ===~===~===~===~===~===~===~===~===~===
 ### ALL ENVIRONMENTS:
+gem 'thin'
 # gem 'unicorn'                           # Use unicorn as the app server
 # gem 'bcrypt-ruby', '~> 3.0.0'           # Use ActiveModel has_secure_password
 gem 'jbuilder', '~> 1.2'                  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -30,6 +31,11 @@ gem 'turbolinks'                          # Turbolinks makes following links in 
 # ===~===~===~===~===~===~===~===~===~===
 group :development do
   gem 'sqlite3'                           # Use sqlite3 as the database for Active Record
+  gem 'quiet_assets'
+  gem 'awesome_print'
+  gem 'better_errors'
+    gem 'binding_of_caller'
+  gem 'meta_request'                      # http://goo.gl/7ToXW
   # gem 'capistrano', group: :development # Use Capistrano for deployment
 end
 
