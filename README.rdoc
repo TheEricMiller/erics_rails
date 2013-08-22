@@ -1,0 +1,3 @@
+== Welcome to Eric’s Rails
+
+Lots to tell you about here…
