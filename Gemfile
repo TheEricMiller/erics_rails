@@ -35,7 +35,7 @@ gem 'simple_form'
 # ===~===~===~===~===~===~===~===~===~===
 # ===~===~===~===~===~===~===~===~===~===
 group :development do
-  gem 'sqlite3'                           # Use sqlite3 as the database for Active Record
+  gem 'pg'                                # Use pg as the database for Active Record
   gem 'quiet_assets'
   gem 'awesome_print'
   gem 'better_errors'
@@ -47,13 +47,13 @@ end
 
 # ===~===~===~===~===~===~===~===~===~===
 group :production, :staging do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 
 # ===~===~===~===~===~===~===~===~===~===
 group :test do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 
