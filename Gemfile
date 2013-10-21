@@ -12,6 +12,7 @@ gem 'thin'
 # gem 'bcrypt-ruby', '~> 3.0.0'           # Use ActiveModel has_secure_password
 gem 'jbuilder', '~> 1.2'                  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'figaro'
+gem 'devise'
 
 
 # ===~===~===~===~===~===~===~===~===~===
