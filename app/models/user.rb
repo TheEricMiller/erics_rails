@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   # :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable, :lockable
+         :confirmable, :lockable, :invitable
+
+  has_many :invitations, :class_name => self.to_s, :as => :invited_by
 
 end
