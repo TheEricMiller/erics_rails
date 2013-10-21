@@ -1,8 +1,18 @@
 EricsRails::Application.routes.draw do
-  devise_for :users
+
   get "welcome/index"
 
   root 'welcome#index'
+
+  devise_for :users
+  devise_scope :user do
+    get "sign_up", :to => "devise/registrations#new", as: :sign_up
+    get "sign_in", :to => "devise/sessions#new",      as: :sign_in
+    get "sign_out", :to => "devise/sessions#destroy", as: :sign_out
+    get "invite", :to => "devise/invitations#new",    as: :invite
+    get "account", :to => "devise/registrations#edit", as: :account
+  end
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
