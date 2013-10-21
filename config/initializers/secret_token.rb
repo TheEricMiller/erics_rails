@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-EricsRails::Application.config.secret_key_base = '2d09734747c442e46fdd310e1c44f400ccb4410cb57f45e0b47052f758b563bf89a2d023897547959c9f60a94d4a1e34ee141db522e18ae34d4abea1e75915bf'
+EricsRails::Application.config.secret_key_base = ENV["DEVISE_SECRET_KEY_BASE"]

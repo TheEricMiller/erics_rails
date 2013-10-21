@@ -6,6 +6,10 @@ ADMIN_EMAIL: user@example.com
 ADMIN_PASSWORD: changeME123
 ROLES: [master, admin, user]
 
+DEVISE_FROM_EMAIL: "Erics Rails <devise@erics-rails.dev>"
+DEVISE_SECRET_KEY: "change_me__run_rake_secret_at_terminal_and_paste_in_here"
+DEVISE_SECRET_KEY_BASE: "change_me__run_rake_secret_at_terminal_and_paste_in_here"
+
 # =======================================
 
 development:
