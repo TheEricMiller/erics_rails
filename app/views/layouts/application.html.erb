@@ -13,5 +13,14 @@
 
 <%= yield %>
 
+<div id="user-widget">
+  <% if current_user %>
+    Welcome <strong><%= current_user.omni_user %></strong>!
+    <%= link_to "Sign out", sign_out_path, id: "sign_out" %>
+  <% else %>
+    <%= link_to "Sign in", sign_in_path, id: "sign_in" %>
+  <% end %>
+</div>
+
 </body>
 </html>

@@ -259,6 +259,31 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
 
+Rails.logger.info("\n\n=========================\nDEVISE START\n")
+
+
+  config.omniauth :facebook, "119112311436703", "4c27d246c731189391608a735c7b7d61",
+                              :scope => 'offline_access, email, user_birthday', :display => 'page', :image_size => 'large'
+                              Rails.logger.info(" > FACEBOOK")
+
+  config.omniauth :twitter, "cxxjZbRhaRRJDVHEbcWK7A", "zr229wYc12JacuK2hzrUXNLoYf6KmsqoeBHFEj48"
+                              Rails.logger.info(" > TWITTER")
+
+  config.omniauth :linkedin, "w7v3b2nsnlfh", "mQWPfWTQmJhfq9sp"
+                              Rails.logger.info(" > LINKEDIN")
+
+  config.omniauth :windowslive, "0000000048108C4C", "XLJ6RwOQnQDKzdthE3iITZTVKFujlCrc", :scope => 'wl.basic'
+                              Rails.logger.info(" > WINDOWS LIVE")                             
+
+  config.omniauth :github, "2c2f7ceed0669f2f7336", "9374209eaeba3e0722c5b5c0abe53a43b1476fdd"#, scope: "user, repo, gist"
+                              Rails.logger.info(" > GITHUB")
+
+  config.omniauth :mailchimp, "538435295410", "e13ab64280ded426ddd882d83ec2ddf4"
+                              Rails.logger.info(" > MAILCHIMP")
+
+
+Rails.logger.info("\nDEVISE END\n=========================\n\n")
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

@@ -14,6 +14,14 @@ gem 'jbuilder', '~> 1.2'                  # Build JSON APIs with ease. Read more
 gem 'figaro'
 gem 'devise'
 gem 'devise_invitable'
+gem 'omniauth'
+gem 'omniauth-facebook'             # YES - DONE
+gem 'omniauth-twitter'              # YES - Responds
+gem 'omniauth-linkedin'             # YES - Responds
+gem 'omniauth-windowslive'          # YES - Responds (limited info)
+gem 'omniauth-github'               # YES - Responds
+gem 'omniauth-mailchimp'            # YES - Responds
+
 
 
 # ===~===~===~===~===~===~===~===~===~===
