@@ -16,12 +16,17 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'omniauth'
 gem 'omniauth-facebook'             # YES - DONE
-gem 'omniauth-twitter'              # YES - Responds
-gem 'omniauth-linkedin'             # YES - Responds
-gem 'omniauth-windowslive'          # YES - Responds (limited info)
+gem 'omniauth-twitter'              # YES - Responds [NO EMAIL]
+gem 'omniauth-linkedin-oauth2'      # YES - Responds
+gem 'omniauth-google-oauth2'        # Yes - Responds
+gem 'omniauth-windowslive'          # YES - Responds
 gem 'omniauth-github'               # YES - Responds
 gem 'omniauth-mailchimp'            # YES - Responds
-
+gem 'omniauth-instagram'            # YES - Responds [NO EMAIL]
+gem 'omniauth-heroku'               # YES - 
+gem 'auth0'                         # YES - 
+gem 'omniauth-smugmug'              # YES - Responds [NO EMAIL]
+gem 'omniauth-salesforce'           # YES - Responds
 
 
 # ===~===~===~===~===~===~===~===~===~===

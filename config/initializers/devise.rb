@@ -261,25 +261,65 @@ Devise.setup do |config|
 
 Rails.logger.info("\n\n=========================\nDEVISE START\n")
 
-
+Rails.logger.info(" > FACEBOOK")
   config.omniauth :facebook, "119112311436703", "4c27d246c731189391608a735c7b7d61",
-                              :scope => 'offline_access, email, user_birthday', :display => 'page', :image_size => 'large'
-                              Rails.logger.info(" > FACEBOOK")
+                  :scope => 'offline_access, email, user_birthday, read_friendlists', :display => 'page', :image_size => 'large'
 
+
+Rails.logger.info(" > TWITTER")
   config.omniauth :twitter, "cxxjZbRhaRRJDVHEbcWK7A", "zr229wYc12JacuK2hzrUXNLoYf6KmsqoeBHFEj48"
-                              Rails.logger.info(" > TWITTER")
 
-  config.omniauth :linkedin, "w7v3b2nsnlfh", "mQWPfWTQmJhfq9sp"
-                              Rails.logger.info(" > LINKEDIN")
 
-  config.omniauth :windowslive, "0000000048108C4C", "XLJ6RwOQnQDKzdthE3iITZTVKFujlCrc", :scope => 'wl.basic'
-                              Rails.logger.info(" > WINDOWS LIVE")                             
+Rails.logger.info(" > LINKEDIN")
+  config.omniauth :linkedin, "w7v3b2nsnlfh", "mQWPfWTQmJhfq9sp",
+                  :scope => 'r_basicprofile r_fullprofile r_emailaddress',
+                  :fields => ['id', 'email-address', 'first-name', 'last-name', 'headline', 'location', 'industry', 'picture-url', 'public-profile-url']
 
-  config.omniauth :github, "2c2f7ceed0669f2f7336", "9374209eaeba3e0722c5b5c0abe53a43b1476fdd"#, scope: "user, repo, gist"
-                              Rails.logger.info(" > GITHUB")
 
+Rails.logger.info(" > GOOGLE")
+  config.omniauth :google_oauth2, "338131185982.apps.googleusercontent.com", "qQzHX-S3uy1yI2riJpQ_xvwn",
+                  {
+                    :name => 'google',
+                    :scope => 'userinfo.email, userinfo.profile, plus.me',
+                    :prompt => 'select_account',
+                    :image_aspect_ratio => 'square',
+                    :image_size => 500
+                  }
+
+
+Rails.logger.info(" > WINDOWS LIVE") 
+  config.omniauth :windowslive, "0000000048108C4C", "XLJ6RwOQnQDKzdthE3iITZTVKFujlCrc", 
+                  :scope => 'wl.offline_access, wl.signin, wl.basic, wl.emails'
+
+
+Rails.logger.info(" > GITHUB")
+  config.omniauth :github, "2c2f7ceed0669f2f7336", "9374209eaeba3e0722c5b5c0abe53a43b1476fdd", 
+                  :scope => 'user, repo, gist'
+
+
+Rails.logger.info(" > MAILCHIMP")
   config.omniauth :mailchimp, "538435295410", "e13ab64280ded426ddd882d83ec2ddf4"
-                              Rails.logger.info(" > MAILCHIMP")
+
+
+Rails.logger.info(" > INSTAGRAM")
+  config.omniauth :instagram, "9881fcc0d35f440bbac315d0bfc61162", "e911fd22cd174aed9dea473fac58f9da"
+
+
+Rails.logger.info(" > HEROKU")
+  config.omniauth :heroku, "708f9ac3-cbd1-4174-a5d7-ca9a6a6865f5", "d1f505cc-2e11-4910-bb3e-deabda6c4f09"
+
+
+Rails.logger.info(" > AUTH0")
+  config.omniauth :auth0, "6netPVh0rL3cBfm5oyvD8mBLDlXmK16z", "C-BiXD2vyMH21bEtOyXtVbg5BuHrx0BMG7Jd23QMLAby5hkCrZKjJ4Y4-dy2suur",
+                  'eric1868.auth0.com'
+
+
+Rails.logger.info(" > SMUGMUG")
+  config.omniauth :smugmug, "cwLDwv5Hhz1CEQpAEk1YQhA8XQmtpG7O", "0c6d051dc07cf354cc5a47e9e6485ff9"
+
+
+Rails.logger.info(" > SALESFORCE")
+  config.omniauth :salesforce, "3MVG9A2kN3Bn17huyfUpRG_gsMD3XOhpaF3cviP3A5yQWRuG3UJQd9mn.a6Sdml8SMrtnZ5Kw_fmR6euSy.jm", "4904038036383585893"
 
 
 Rails.logger.info("\nDEVISE END\n=========================\n\n")
